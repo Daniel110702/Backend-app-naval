@@ -13,12 +13,12 @@ import  { authJwt }  from '../middlewares';
 
 router.post('/',[authJwt.verifyToken2], requestsCtrl.createRequest);
 
-router.get('/', requestsCtrl.getRequests);
+router.get('/',[authJwt.verifyToken, authJwt.isAdmin ], requestsCtrl.getRequests);
 
-router.get('/:requestId', requestsCtrl.getRequestById);
+router.get('/:requestId',[authJwt.verifyToken, authJwt.isAdmin ], requestsCtrl.getRequestById);
 
-router.put('/:requestId', [authJwt.verifyToken, authJwt.isAdmin, authJwt.isModerador ], requestsCtrl.updateRequestById);
+router.put('/:requestId', [authJwt.verifyToken, authJwt.isAdmin ], requestsCtrl.updateRequestById);
 
-router.delete('/:requestId', [authJwt.verifyToken, authJwt.isAdmin, authJwt.isModerador], requestsCtrl.deleteRequestById);
+router.delete('/:requestId', [authJwt.verifyToken, authJwt.isAdmin ], requestsCtrl.deleteRequestById);
 
 export default router;

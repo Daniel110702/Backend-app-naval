@@ -6,7 +6,7 @@ import Request from "../models/Request";
 
 export const createRequest = async(req, res) =>{
     // console.log(req.body);
-    const {name, guardia, fecha, grado, departamento, division, asunto, objeto, lugar, desde, hasta} = req.body;
+    const {name, guardia, fecha, grado, departamento, division, asunto, objeto, lugar, desde, hasta, estado} = req.body;
 
     const newRequest = new Request({
         name,
@@ -19,7 +19,8 @@ export const createRequest = async(req, res) =>{
         objeto,
         lugar,
         desde: convertirFechaJSONaJS(desde),
-        hasta: convertirFechaJSONaJS(hasta)
+        hasta: convertirFechaJSONaJS(hasta),
+        estado
     });
 
     function convertirFechaJSONaJS(json) {

@@ -15,7 +15,8 @@ const requestSchema = new Schema({
     objeto: String,
     lugar: String,
     desde: Date,
-    hasta: Date
+    hasta: Date,
+    estado: String
 
 }, {
     timestamps: true,
