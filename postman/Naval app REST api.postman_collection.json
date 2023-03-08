@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "29fdda3c-7c0f-4838-b2ac-52d33de89bc8",
+		"name": "Naval app REST api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "REQUEST",
+			"item": [
+				{
+					"name": "POST REQUEST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDdlNjUzZDg2NzI0MmRmNzMwYTJjMyIsImlhdCI6MTY3ODIzOTMxNSwiZXhwIjoxNjc4MjQxMTE1fQ.4ResJPTVxiTxmksiz6eJmAmIPXT-5UHX-2JQYC_T3AI",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Daniel barcelo\",\r\n    \"guardia\": \"Tercera\",\r\n    \"fecha\":   \"2023-03-07T00:00:00.000Z\",\r\n    \"grado\":\"BGE\",\r\n    \"departamento\": \"BAENS\",\r\n    \"division\": \"CIS Valverde\",\r\n    \"asunto\": \"Juego deportivo\",\r\n    \"objeto\": \"visita familiar\",\r\n    \"lugar\": \"baranoa-atlantico\",\r\n    \"desde\":  \"2023-03-07T06:00:00.000Z\",\r\n    \"hasta\": \"2023-03-07T15:00:00.000Z\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/requests",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"requests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT REQUEST",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Juan alcachofa\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/requests/640528969a63060bea98e78c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"requests",
+								"640528969a63060bea98e78c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET REQUEST",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/requests",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"requests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET REQUEST BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/requests/64075302ea4eb860c84b57ed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"requests",
+								"64075302ea4eb860c84b57ed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE REQUEST",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDZhOWQyNTA2MTkyNmRlNjRjYjMzMSIsImlhdCI6MTY3ODE1ODI5MCwiZXhwIjoxNjc4MTYwMDkwfQ.yELlUI5wATR5LEKiEqE_EVxxzN7ZsWCgHNmNF8lsaSc",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/requests/640698e15450d36df65c6e78",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"requests",
+								"640698e15450d36df65c6e78"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "SIGNUP",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"email\": \"control@admin.com\",\r\n    \"password\": \"password\",\r\n    \"roles\": \"admin\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SIGNIN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"control@moderador.com\",\r\n    \"password\": \"password\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cedula\": 1001855055,\r\n    \"password\": \"password\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cedula\": 1001855065,\r\n    \"password\": \"password\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

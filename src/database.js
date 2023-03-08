@@ -1,8 +1,11 @@
+/**
+ * Archivo para la configuracion de la conexion a la base de datos
+ */
 import mongoose from 'mongoose'
 
 mongoose.connect('mongodb://127.0.0.1:27017/naval-app', {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
 })
     .then(db => console.log('Db is connected'))
     .catch(error => console.log(error))
